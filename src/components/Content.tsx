@@ -14,23 +14,23 @@ const Content = () => {
   return (
     <>
       <Navbar />
-      <div className="  p-10">
+      <div className="p-10">
         <Input name={name} handleChange={handleChangeName} handleSubmit={submit} />
         {loading && (
           <>
-            <div role="status" className=" mx-auto w-1/2 animate-pulse">
+            <div role="status" className=" mx-auto w-full lg:w-1/2 animate-pulse">
               <div className=" bg-gray-200 dark:bg-gray-500 rounded-lg w-full h-28 mb-4"></div>
             </div>
-            <div role="status" className=" mx-auto w-1/2 animate-pulse">
+            <div role="status" className=" mx-auto w-full lg:w-1/2 animate-pulse">
               <div className=" bg-gray-200 dark:bg-gray-500 rounded-lg w-full h-28 mb-4"></div>
             </div>
-            <div role="status" className=" mx-auto w-1/2 animate-pulse">
+            <div role="status" className=" mx-auto w-full lg:w-1/2 animate-pulse">
               <div className=" bg-gray-200 dark:bg-gray-500 rounded-lg w-full h-28 mb-4"></div>
             </div>
-            <div role="status" className=" mx-auto w-1/2 animate-pulse">
+            <div role="status" className=" mx-auto w-full lg:w-1/2 animate-pulse">
               <div className=" bg-gray-200 dark:bg-gray-500 rounded-lg w-full h-28 mb-4"></div>
             </div>
-            <div role="status" className=" mx-auto w-1/2 animate-pulse">
+            <div role="status" className=" mx-auto w-full lg:w-1/2 animate-pulse">
               <div className=" bg-gray-200 dark:bg-gray-500 rounded-lg w-full h-28 mb-4"></div>
             </div>
           </>
@@ -39,9 +39,9 @@ const Content = () => {
           !loading &&
           user.map((item: { id: Key | null | undefined; login: string; avatar_url: string; html_url: string; }) => {
             return (
-              <>
-                <Card key={item.id} name={item.login} avatar_url={item.avatar_url} html_url={item.html_url} />
-              </>
+              <div key={item.id}>
+                <Card name={item.login} avatar_url={item.avatar_url} html_url={item.html_url} />
+              </div>
             );
           })}
       </div>

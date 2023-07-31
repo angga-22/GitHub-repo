@@ -14,7 +14,7 @@ const Card: React.FC<ICard> = ({ name, avatar_url, html_url }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [toggle]);
   return (
-    <div className="w-1/2 p-2 flex flex-col items-center  m-2 bg-white bg-white mx-auto rounded-xl ">
+    <div className="w-full  lg:w-1/2 p-2 flex flex-col items-center  m-2 bg-white bg-white mx-auto rounded-xl ">
       <div
         className="flex items-center justify-between rounded-lg w-full bg-gray-200 p-2 cursor-pointer"
         onClick={() => setToggle(!toggle)}
@@ -70,7 +70,7 @@ const Card: React.FC<ICard> = ({ name, avatar_url, html_url }) => {
             !loading &&
             repos.map((item) => {
               return (
-                <ul className="flex flex-col mb-5 py-5 bg-gray-200 rounded-lg px-5">
+                <ul className="flex w-full flex-col mb-5 py-5 bg-gray-200 rounded-lg px-5">
                   <div className="flex justify-between items-center">
                     <li className="font-bold"> - {item.name}</li>
                     <li className="text-sm flex items-center">
